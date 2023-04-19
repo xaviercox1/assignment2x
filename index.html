@@ -1,0 +1,70 @@
+<html>
+<head>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/buzz/1.2.0/buzz.min.js"></script>
+
+</head>
+<body style = "background-color: lightgray;"></body>
+<body>
+
+    <style>
+        .row{
+            width:720px;
+            margin: 10px auto 10px auto ;
+        }
+        .image-container {
+            display: table-cell;
+            vertical-align: middle;
+            padding:20px;
+        }
+    </style>
+
+    <div class="row">
+        <div class="image-container"><img id="growth" src="img/growthb.png" onmousedown="this.src='img/growth.png'" height="200" width="200" onmouseover="this.src"/></div>
+        <div class="image-container"><img id="reflect" src="img/reflectb.png" onmousedown="this.src='img/reflect.png'" height="200" width="200" onmouseup="this.src"/></div>
+        <div class="image-container"><img id="talk" src="img/talkb.png" onmousedown="this.src='img/talk.png'" height="200" width="200" onmouseup="this.src"/></div>
+    </div>
+
+    <div class="row">
+        <div class="image-container"><img id="think" src="img/thinkb.png" onmousedown="this.src='img/think.png'" height="200" width="200" onmouseup="this.src"/></div>
+        <div class="image-container"><img id="sleep" src="img/sleepb.png" onmousedown="this.src='img/sleep.png'" height="200" width="200" onmouseup="this.src"/></div>
+        <div class="image-container"><img id="balance" src="img/balanceb.png" onmousedown="this.src='img/balance.png'" height="200" width="200" onmouseup="this.src"/></div>
+    </div>
+
+<p></p>
+
+    <div class="row">
+        
+        <div class="image-container"><img id="music" src="img/musicb.png" onmousedown="this.src='img/music.png'" height="200" width="200" onmouseup="this.src"/></div>
+        <div class="image-container"><img id="meditate" src="img/meditateb.png" onmousedown="this.src='img/meditate.png'" height="200" width="200" onmouseup="this.src"/></div>
+        <div class="image-container"><img id="environment" src="img/environmentb.png" onmousedown="this.src='img/environment.png'" height="200" width="200" onmouseup="this.src"/></div>
+        
+    </div>
+
+    <script>
+        var sound1 = new buzz.sound("sound/environment.mp3");
+        var sound2 = new buzz.sound("sound/reflection.wav");
+        var sound3 = new buzz.sound("sound/growth.flac");
+        var sound4 = new buzz.sound("sound/music.wav");
+        var sound5 = new buzz.sound("sound/balance.wav");
+        var sound6 = new buzz.sound("sound/talk.wav");
+        var sound7 = new buzz.sound("sound/meditate.mp3");
+        var sound8 = new buzz.sound("sound/think.wav");
+        var sound9 = new buzz.sound("sound/sleep.wav");
+
+        window.onload = function() {
+                document.getElementById('environment').addEventListener('click', function () {sound1.play(); });  
+                document.getElementById('reflect').addEventListener('click', function () {sound2.play(); });
+                document.getElementById('growth').addEventListener('click', function () {sound3.play(); });
+                document.getElementById('music').addEventListener('click', function () {sound4.play(); });
+                document.getElementById('balance').addEventListener('click', function () {sound5.play(); });
+                document.getElementById('talk').addEventListener('click', function () {sound6.play(); });
+                document.getElementById('meditate').addEventListener('click', function () {sound7.play(); });
+                document.getElementById('think').addEventListener('click', function () {sound8.play(); });
+                document.getElementById('sleep').addEventListener('click', function () {sound9.play(); });
+        }
+
+    </script>
+</body>
+
+</html>
